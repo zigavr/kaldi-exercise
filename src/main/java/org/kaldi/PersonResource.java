@@ -3,8 +3,6 @@ package org.kaldi;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
-import org.kaldi.model.Person;
-import org.kaldi.repository.PersonRepository;
 
 import java.util.List;
 

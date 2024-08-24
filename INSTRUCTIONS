@@ -1,7 +1,11 @@
 Želimo izdelati enostavno aplikacijo za pomoč uporabnikom. Aplikacija ima dva tipa odjemalcev, eden je namenjen uporabnikom in teče na mobilnih napravah, drugi je namenjen operaterjem in teče v spletnem brskalniku.
 
-V mobilni aplikaciji lahko uporabnik izbere eno od "sob": tehnika, storitve in pogovor. V izbrani sobi ima možnost napisati vprašanje oz. sporočilo ter počakati na odgovor operaterja.
-V aplikacijo v spletnem brskalniku se je potrebno prijaviti. Po prijavi operater vidi čakajoče in prevzete pogovore, prevzame lahko samo čakajoče pogovore. Operaterjev je več. Ob prevzemu se mu izpiše, kateri uporabnik je začel pogovor, iz katere sobe ga je poslal ter sporočilo, ki ga je uporabnik napisal. Operater ima nato možnost uporabniku odgovoriti.
+V mobilni aplikaciji lahko uporabnik izbere eno od "sob": tehnika, storitve in pogovor. V izbrani sobi ima možnost napisati vprašanje oz. sporočilo
+ter počakati na odgovor operaterja.
+V aplikacijo v spletnem brskalniku se je potrebno prijaviti. Po prijavi operater vidi čakajoče in prevzete pogovore,
+prevzame lahko samo čakajoče pogovore.
+Operaterjev je več. Ob prevzemu se mu izpiše, kateri uporabnik je začel pogovor,
+iz katere sobe ga je poslal ter sporočilo, ki ga je uporabnik napisal. Operater ima nato možnost uporabniku odgovoriti.
 
 Tvoja naloga je napisati REST API (brez spletnega ali mobilnega klienta), ki bo imel vse endpointe, ki jih klienti/aplikacija potrebujejo. Za izdelavo REST strežnika uporabi ogrodje kot so Quarkus, NestJs ali Fastify, avtentikacija naj bo Basic http, za shranjevanje uporabi kakršno koli bazo: MySQL, H2, PostgreSQL, MongoDB,....
 Lahko predvidevaš, da so uporabniki že v bazi in ni potrebo pisati logike za registracijo novih uporabnikov.
@@ -26,6 +30,6 @@ Operater (web app):
         Možnost odgovora
 
     GET allMessages()
-    PUT takeOverMessage(messageId) - Pregled, da je msssage čakajoč
+    PUT takeOverMessage(messageId) - Pregled, da je message čakajoč
     GET message(messageId) -
     POST answerMessage(message)
