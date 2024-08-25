@@ -1,24 +1,24 @@
 package org.kaldi.model;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.*;
 
 @Entity
 public class Message extends PanacheEntity {
 
     private String question;
+
     private String room;
-    @OneToOne(fetch = FetchType.EAGER)
+
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "mobile_user")
     private MobileUser mobileUser;
 
     @OneToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "operator_user")
-    private OperatorUser operatorUser;
-    private String answer;
+    @JoinColumn(name = "web_user")
+    private WebUser webUser;
+
+    private String reply;
 
     public String getQuestion() {
         return question;
@@ -44,19 +44,19 @@ public class Message extends PanacheEntity {
         this.mobileUser = mobileUser;
     }
 
-    public OperatorUser getOperatorUser() {
-        return operatorUser;
+    public WebUser getWebUser() {
+        return webUser;
     }
 
-    public void setOperatorUser(OperatorUser operatorUser) {
-        this.operatorUser = operatorUser;
+    public void setWebUser(WebUser webUser) {
+        this.webUser = webUser;
     }
 
-    public String getAnswer() {
-        return answer;
+    public String getReply() {
+        return reply;
     }
 
-    public void setAnswer(String answer) {
-        this.answer = answer;
+    public void setReply(String reply) {
+        this.reply = reply;
     }
 }

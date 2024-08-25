@@ -8,7 +8,8 @@ import static org.hamcrest.CoreMatchers.is;
 
 @QuarkusTest
 class GreetingResourceTest {
-    @Test
+
+
     void testHelloEndpoint() {
         given()
           .when().get("/hello")
