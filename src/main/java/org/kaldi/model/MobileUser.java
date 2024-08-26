@@ -5,7 +5,7 @@ import jakarta.persistence.Entity;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
-@Entity
+@Entity(name = "mobile_user")
 public class MobileUser extends PanacheEntity {
 
     @NotNull (message = "Designation is missing")
